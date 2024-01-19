@@ -1,0 +1,370 @@
+:root{
+  --dark-blue:hsl(192, 37%, 48%);
+  --light-blue:hsl(192, 90%, 77%);
+  --dark-purple:hsl(268, 34%, 53%);
+  --light-purple:hsl(268, 100%, 86%);
+  --black:hsl(240, 21%, 20%);
+  --white:hsl(0, 0%, 98%);
+  --grey:hsl(240, 10%, 57%);
+
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  min-height: 100vh;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--grey);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.button{
+  display: block;
+  border-style: none;
+  background-color: var(--dark-purple);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 3.6;
+  padding: 0 2.3rem;
+  border-radius: 2rem;
+  margin: 1rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+.button:hover{
+  cursor: pointer;
+  transition: 1s;
+}
+
+
+/*SECTION1*/
+
+.section-header{
+  max-width: 21rem;
+}
+
+.image-logo{
+  margin: 3rem auto;
+}
+
+.image-header{
+  max-width: 125%;
+  position: relative;
+    left: -2.6rem;
+}
+
+.display-image-desktop{
+  display: none;
+}
+
+.main-title{
+  color: var(--black);
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin: 3.175rem 2rem 1.875rem;
+}
+
+.section-text{
+  line-height: 1.6;
+  margin-bottom: 2.125rem; 
+}
+
+.button-container{
+  margin-bottom: 3.75rem;
+}
+
+.button-download{
+  background-color: var(--dark-blue);
+}
+
+.button-download:hover{
+  background-color: var(--light-blue);
+}
+
+.button-download span{
+  color: hsla(0, 0%, 98%, 70%);
+}
+
+.button-info{
+  padding: 0 1.7rem;
+}
+
+.button-info:hover{
+  background-color: var(--light-purple);
+}
+
+.inter-section{
+  margin: 0 auto;
+  color: var(--grey);
+}
+
+.inter-section .line{
+  background-color: var(--grey);
+  height: 5.25rem;
+  width: 0.1rem;
+  margin: 0 auto;
+}
+
+.inter-section p{
+  width: 3.5rem;
+  height: 3.5rem;
+  font-weight: 900;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  border: 0.3px solid var(--grey);
+  line-height: 3; 
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+
+/*SECTION2*/
+
+.section-middle{
+  max-width: 21rem;
+  margin-top: 3.875rem;
+}
+
+.image-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-middle{
+  width: 46%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.title-overline{
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin: 3rem auto 1.5rem;
+}
+
+.section-title{
+  color: var(--black);
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0 1rem 1.5rem;
+}
+
+.section-middle .section-text{
+  padding: 0 0.5rem;
+}
+
+
+/*SECTION3*/
+
+.display-footer{
+  background-image: linear-gradient(to bottom, hsla(192, 37%, 48%, 85%) 100%, rgba(0,0,0,0) 0%),
+                    url(./images/mobile/image-footer.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;     
+  color: var(--white);
+  width: 100%;
+  padding: 5.75rem 0 4.375rem;
+  position: relative;
+  margin-top: 11.25rem; 
+}
+
+.display-footer .inter-section{
+  position: absolute;
+    top: -7rem; left: calc(50% - 1.75rem);
+  z-index: 1;
+}
+
+.section-footer{
+  max-width: 21rem;
+  margin: 0 auto;
+}
+
+.section-footer .section-title{
+  color: var(--white);
+  margin-bottom: 1.875rem;
+}
+
+.section-footer .section-text{
+  padding: 0 1.5rem;
+}
+
+.section-footer .button-download{
+  background-color: var(--dark-purple);
+}
+
+.section-footer .button-download:hover{
+  background-color: var(--light-purple);
+}
+
+@media screen and (min-width:768px)
+{
+
+  .image-logo{
+    margin: clamp(3rem, -1.8571rem + 10.119vw, 7.25rem) auto;
+  }
+
+  .section-header{
+    max-width: clamp(28.5625rem, 22.6339rem + 12.3512vw, 33.75rem);
+  } 
+
+  .image-header{
+    max-width: 51.25rem;
+    position: relative;
+      left: clamp(-11.375rem, -15.2321rem + 8.0357vw, -8rem);  
+  }
+
+  .main-title{
+    font-size: clamp(3rem, 1.8571rem + 2.381vw, 4rem);
+    margin: 3.175rem 0 1.875rem; 
+    line-height: 1;
+  }
+
+  .section-text{
+    font-size: clamp(1rem, 0.8571rem + 0.2976vw, 1.125rem);
+  }
+
+  .button-container{   
+    display: flex;
+    justify-content: center;
+  }  
+
+  .button-container .button{
+    margin: 0 0.5rem;
+  }
+
+
+  /*SECTION2*/
+
+  .section-middle{
+    max-width: 100%;
+  }
+
+  .image-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: clamp(43.0625rem, 12.9911rem + 62.6488vw, 69.375rem);
+    gap: clamp(0.6875rem, -0.5982rem + 2.6786vw, 1.8125rem);
+  }
+
+  .image-middle{
+    width: clamp(10.25rem, 3.75rem + 13.5417vw, 15.9375rem);
+  }  
+
+  .text-container{
+    max-width: clamp(33.75rem, 38.1696rem + -4.9107vw, 35.8125rem);
+    margin: 0 auto;
+  }
+
+  .section-middle .section-text{
+    padding: 0;
+  }
+
+  .section-title{
+    font-size: 2.5rem;
+    padding: 0 clamp(1rem, 3.1429rem + -2.381vw, 2rem);
+    line-height: 1;
+  }
+
+  .text-container .section-text{
+    padding: 0 clamp(0rem, -1.1429rem + 2.381vw, 1rem);
+  }
+
+
+  /*SECTION3*/
+
+  .display-footer{
+    background-image: linear-gradient(to bottom, hsla(192, 37%, 48%, 85%) 100%, rgba(0,0,0,0) 0%),
+                      url(./images/tablet/image-footer.jpg);
+    margin-top: 12.25rem;
+  }
+
+  .section-footer{
+    max-width: 35rem;
+  }
+
+}
+
+
+@media screen and (min-width:1420px)
+{
+
+  .display-image{
+    display: none;
+  }
+
+  .display-image-desktop{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+      top: 17rem; 
+  }
+
+  .image-header-left, .image-header-right{
+    display: inline;
+    width: 24rem; 
+  }
+
+  .image-header-left{
+    position: relative;
+      top: -3.4rem; left: -22rem; 
+  }
+
+  .image-header-right{
+    position: relative;
+      right: -22rem;
+  }
+
+  .display-footer{
+    background-image: linear-gradient(to bottom, hsla(192, 37%, 48%, 85%) 100%, rgba(0,0,0,0) 0%),
+                      url(./images/desktop/image-footer.jpg);
+    margin-top: 12.25rem;
+  }
+
+  .section-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70rem;
+    text-align: left;
+  }
+
+  .section-footer .section-title, .section-footer .section-text{
+    width: 22rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-footer .button-download{
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+}
